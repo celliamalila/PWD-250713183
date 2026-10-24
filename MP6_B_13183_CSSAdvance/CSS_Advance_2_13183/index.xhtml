@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C/DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="id" lang="id">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Formulir Pendaftaran Workshop IT</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Formulir Pendaftaran Workshop</h1>
+        <p class="subtitle">Silahkah isi formulir di bawah ini dengan data yang valid untuk mengikuti kegiatan workshop.</p>
+        
+        <form action="" method="post" enctype="multipart/form-data">
+
+            <h2>Data Peserta</h2>
+            <table>
+                <tr>
+                    <td style="width: 40%;">
+                        <label for="nama"><strong>Nama Lengkap</strong></label>
+                    </td>
+                    <td>
+                        <input type="text" id="nama" name="nama" size="30"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="width: 40%;">
+                        <label for="npm"><strong>Nomor Pokok Mahasiswa (NPM)</strong></label>
+                    </td>
+                    <td>
+                        <input type="text" id="npm" name="npm" size="30" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="wa"><strong>Nomor WhatsApp: </strong></label>
+                    </td>
+                    <td>
+                        <input type="text" id="wa" name="wa" size="30" placeholder="Contoh: 081234567890" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Jenis Kelamin</strong>
+                    </td>
+                    <td>
+                        <input type="radio" id="laki" name="jk" value="Laki-Laki"/>
+                        <label for="laki" class="inline-label">Laki-Laki</label>
+
+                        <input type="radio" id="perempuan" name="jk" value="Perempuan"/>
+                        <label for="perempuan" class="inline-label">Perempuan</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="prodi"><strong>Program Studi</strong>
+                        </label>
+                    </td>
+                    <td>
+                        <select id="prodi" name="prodi">
+                            <option value="">--- Pilih Program Studi ---</option>
+                            <option>Informatika</option>
+                            <option>Sistem Informasi</option>
+                            <option>Teknik Industri</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+
+        <h2>Workshop</h2>
+        <table>
+            <tr>
+                <td style="width: 40%;">
+                    <strong>Kategori Peserta</strong>
+                </td>
+                <td>
+                    <input type="radio" id="mahasiswa" name="jp" value="Mahasiswa"/>
+                    <label for="mahasiswa" class="inline-label">Mahasiswa</label>
+
+                    <input type="radio" id="umum" name="jp" value="Umum"/>
+                    <label for="umum" class="inline-label">Umum</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="instansi"><strong>Asal Instansi</strong></label>
+                </td>
+                <td>
+                    <input type="text" id="instansi" name="instansi" size="30" placeholder="Khusus Peserta Umum" />
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">
+                    <strong>Jenis Workshop</strong>
+                </td>
+                <td>
+                    <div class="group-checkbox">
+                        <input type="checkbox" id="uiux" name="materi" value="UI/UX Design"/>
+                        <label for="uiux">UI/UX Design</label>
+                    </div>
+
+                    <div class="group-checkbox">
+                        <input type="checkbox" id="webdev" name="materi" value="Web Development"/>
+                        <label for="webdev">Web Development</label>
+                    </div>
+
+                    <div class="group-checkbox">
+                        <input type="checkbox" id="data" name="materi" value="Data Analysis"/>
+                        <label for="data">Data Analysis</label>
+                    </div>
+
+                    <div class="group-checkbox">
+                        <input type="checkbox" id="cyber" name="materi" value="cyber"/>
+                        <label for="cyber">Cyber Security</label>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <h2>Informasi Tambahan</h2>
+        <table>
+            <tr>
+                <td style="width: 40%; vertical-align: top;">
+                    <label for="alasan"><strong>Motivasi Mengikuti WorkShop</strong></label>
+                </td>
+                <td>
+                    <textarea id="alasan" name="alasan" rows="8" cols="30"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Metode Pembayaran</strong></td>
+                <td>
+                    <input type="radio" id="qris" name="pembayaran" value="QRIS" />
+                    <label for="qris" class="inline-label">QRIS</label>
+
+                    <input type="radio" id="transfer" name="pembayaran" value="Transfer Bank" />
+                    <label for="transfer" class="inline-label">Transfer Bank</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="bukti"><strong>Unggah Bukti Pembayaran</strong></label>
+                </td>
+                <td>
+                    <input type="file" id="bukti" name="bukti" accept="image/gif, image/jpeg, image/jpg"/>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:center;">
+                    <input type="submit" name="daftar" value="Daftar" class="btn-submit" />
+                    <input type="reset" name="reset" value="Reset" class="btn-reset" />
+                </td>
+            </tr>
+        </table>
+
+        </form>
+    </div>
+</body>
+</html>
